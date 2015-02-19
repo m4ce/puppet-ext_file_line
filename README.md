@@ -14,6 +14,7 @@ A typical example would be something like the following:
 ```
 $value = "yes"
 ext_file_line {"nscd_enable_cache_passwd":
+  path => "/etc/nscd.conf",
   line => "\\1$value",
   match => '^(.*?enable-cache.*?passwd.*?)(yes|no)$';
 }
